@@ -51,39 +51,45 @@
 </body>
 
 <script>
-  const colorThemes = document.querySelectorAll('[name="theme"]');
 
-  const storeTheme = function (theme) {
+  const themeSelectorItems = document.querySelectorAll('[name="theme"]');
+
+  const storeUserTheme = function (theme) {
     localStorage.setItem("theme", theme)
   }
 
-  const setTheme = function () {
+  const setUserTheme = function () {
 
-    const activeTheme = localStorage.getItem("theme")
+    const themeStoraged = localStorage.getItem("theme")
 
-    colorThemes.forEach((themeOption) => {
+    themeSelectorItems.forEach((item) => {
 
-      if (themeOption.checked) {
-        storeTheme(themeOption.id)
+      if (item.checked && !themeStoraged) {
+        storeUserTheme(item.id)
       }
 
-      if (themeOption.id === activeTheme) {
-        themeOption.checked = true
+      if (item.id === themeStoraged) {
+        item.checked = true
       }
+
+
     })
 
-    document.querySelector('body').className = activeTheme;
+    // fallback for CSS `:has` support
+    document.querySelector('body').className = themeStoraged;
   }
 
-  colorThemes.forEach((themeOption) => {
+  themeSelectorItems.forEach((themeOption) => {
     themeOption.addEventListener("click", () => {
-      storeTheme(themeOption.id)
 
+      storeUserTheme(themeOption.id)
+
+      // fallback for CSS `:has` support
       document.querySelector('body').className = themeOption.id;
     })
   })
 
-  document.onload = setTheme();
+  document.onload = setUserTheme();
 
 </script>
 
