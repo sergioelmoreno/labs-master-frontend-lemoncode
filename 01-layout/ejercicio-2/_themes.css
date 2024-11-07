@@ -1,0 +1,102 @@
+:root {
+
+  /* colors */
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-white-alpha: hsla(0, 0%, 100%, .32);
+  --clr-black-700: hsl(0, 0%, 0%);
+  --clr-black-400: hsl(0, 0%, 31%);
+  --clr-black-300: hsl(0, 0%, 80%);
+  --clr-black-alpha: hsla(0, 0%, 0%, .32);
+  --clr-purple-700: hsl(316, 71%, 45%);
+  --clr-purple-400: hsl(270, 50%, 40%);
+  --clr-purple-300: hsl(290, 32%, 81%);
+  --clr-green-700: hsl(121, 73%, 23%);
+  --clr-green-400: hsl(122, 76%, 42%);
+  --clr-green-300: hsl(149, 52%, 84%);
+
+  /* theme selector*/
+  --clr-theme-purple: var(--clr-purple-400);
+  --clr-theme-green: var(--clr-green-400);
+
+  /* theme colors */
+  --_clr-base: var(--clr-base, var(--clr-white));
+  --_clr-text: var(--clr-text, var(--clr-black-700));
+  --_clr-base-important: var(--clr-base-important, var(--clr-black-400));
+  --_clr-text-important: var(--clr-text-important, var(--clr-white));
+  --_clr-base-warning: var(--clr-base-warning, var(--clr-black-700));
+  --_clr-text-warning: var(--text-warning, var(--clr-white));
+
+  /* font families */
+  --ff-default: system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
+  --_ff-accent: var(--ff-accent, var(--ff-default));
+  --_ff-base: var(--ff-base, var(--ff-default));
+
+  /* box effects */
+  --_fx-shadow: var(--fx-shadow, 0 3px 6px -1px var(--clr-black-alpha));
+  --_fx-border: var(--fx-border, 1px solid var(--clr-black));
+}
+
+
+.purple-theme,
+:root:has(#purple-theme:checked) {
+
+  /* theme colors */
+  --clr-base: var(--clr-purple-300);
+  --clr-text: var(--clr-black);
+  --clr-base-important: var(--clr-purple-400);
+  --clr-text-important: var(--clr-white);
+  --clr-base-warning: var(--clr-purple-700);
+  --clr-text-warning: var(--clr-white);
+
+  /* font families */
+  --ff-accent: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  --ff-base: Arial, Helvetica, sans-serif;
+
+  /* box effects */
+  @media (prefers-color-scheme: light) {
+    --fx-shadow: 0 3px 6px -1px var(--clr-black-alpha);
+    --fx-border: 1px solid var(--clr-purple-300);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    --fx-shadow: 0 3px 6px -1px var(--clr-white-alpha);
+    --fx-border: 1px solid var(--clr-purple-300);
+  }
+}
+
+.green-theme,
+:root:has(#green-theme:checked) {
+
+  /* theme colors */
+  --clr-base: var(--clr-green-300);
+  --clr-text: var(--clr-black);
+  --clr-base-important: var(--clr-green-400);
+  --clr-text-important: var(--clr-white);
+  --clr-base-warning: var(--clr-green-700);
+  --clr-text-warning: var(--clr-white);
+
+  /* font families */
+  --ff-accent: 'Times New Roman', Times, serif;
+  --ff-base: 'Courier New', Courier, monospace;
+
+  /* box effects */
+  @media (prefers-color-scheme: light) {
+    --fx-shadow: 0 3px 6px 5px var(--clr-black-alpha);
+    --fx-border: 1px solid var(--clr-green-300);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    --fx-shadow: 0 3px 6px 5px var(--clr-white-alpha);
+    --fx-border: 1px solid var(--clr-green-300);
+  }
+}

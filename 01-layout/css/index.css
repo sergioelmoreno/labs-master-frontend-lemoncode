@@ -1,0 +1,55 @@
+@import "./_reset.css";
+
+:root {
+  /* font weights */
+  --fw-regular: 500;
+  --fw-bold: 600;
+  --fw-black: 700;
+
+  /* font sizes */
+  --fs-300: 1rem;
+  --fs-400: 1.125rem;
+  --fs-500: 1.375rem;
+  --fs-700: 1.75rem;
+  --fs-700: 2.25rem;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: var(--fs-700);
+  font-weight: var(--fw-bold);
+
+  &::before {
+    content: "🍋";
+    margin-right: .25rem;
+    display: inline-block;
+  }
+}
+
+main {
+  padding: 1rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

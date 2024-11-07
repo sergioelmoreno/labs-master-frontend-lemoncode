@@ -1,0 +1,90 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Ejercicio 2</title>
+</head>
+
+<body>
+  <header>
+    <form class="theme-selector" action="">
+      <legend>Pick a color scheme:</legend>
+      <fieldset>
+        <label class="sr-only" for="purple-theme">Purple theme</label>
+        <input type="radio" name="theme" id="purple-theme" checked>
+        <label class="sr-only" for="green-theme">Green theme</label>
+        <input type="radio" name="theme" id="green-theme">
+      </fieldset>
+    </form>
+  </header>
+  <main>
+    <div class="wrapper">
+      <dialog class="alert alert-warning" open>
+        <span class="alert-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+            <path
+              d="m40-120 440-760 440 760H40Zm138-80h604L480-720 178-200Zm302-40q17 0 28.5-11.5T520-280q0-17-11.5-28.5T480-320q-17 0-28.5 11.5T440-280q0 17 11.5 28.5T480-240Zm-40-120h80v-200h-80v200Zm40-100Z" />
+          </svg>
+        </span>
+        <p><strong>ALERT:</strong> Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+      </dialog>
+      <dialog class="alert alert-important" open>
+        <span class="alert-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+            <path
+              d="M480-120q-33 0-56.5-23.5T400-200q0-33 23.5-56.5T480-280q33 0 56.5 23.5T560-200q0 33-23.5 56.5T480-120Zm-80-240v-480h160v480H400Z" />
+          </svg>
+        </span>
+        <p><strong>IMPORTANT: </strong>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+      </dialog>
+      <div class="container">
+        <h1>Ejercicio - 2</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore cumque vel commodi rerum fugit voluptas,
+          suscipit atque, eligendi ab reprehenderit ratione omnis fugiat hic repellat consectetur rem porro, repellendus
+          veniam!</p>
+      </div>
+    </div>
+  </main>
+</body>
+
+<script>
+  const colorThemes = document.querySelectorAll('[name="theme"]');
+
+  const storeTheme = function (theme) {
+    localStorage.setItem("theme", theme)
+  }
+
+  const setTheme = function () {
+
+    const activeTheme = localStorage.getItem("theme")
+
+    colorThemes.forEach((themeOption) => {
+
+      if (themeOption.checked) {
+        storeTheme(themeOption.id)
+      }
+
+      if (themeOption.id === activeTheme) {
+        themeOption.checked = true
+      }
+    })
+
+    document.querySelector('body').className = activeTheme;
+  }
+
+  colorThemes.forEach((themeOption) => {
+    themeOption.addEventListener("click", () => {
+      storeTheme(themeOption.id)
+
+      document.querySelector('body').className = themeOption.id;
+    })
+  })
+
+  document.onload = setTheme();
+
+</script>
+
+</html>
