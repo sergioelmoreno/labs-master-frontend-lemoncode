@@ -34,7 +34,7 @@ Crear la barra de navegación de la imagen usando flexbox.
 - La barra de navegación responde a distintas resoluciones. Utilizar media queries para conseguir este resultado.
 - Mirar el pdf para ver el resultado de las distintas resoluciones.
 
-> Entrega [Ejercicio 3](./ejercicio-4)
+> Entrega [📁 Ejercicio 3](./ejercicio-3)
 
 ## Ejercicio 4
 
