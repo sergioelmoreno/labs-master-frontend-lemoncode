@@ -41,11 +41,13 @@
   --_ff-accent: var(--ff-accent, var(--ff-default));
   --_ff-base: var(--ff-base, var(--ff-default));
 
+  /* spacing */
+  --pad-base: .5rem;
+
   /* box effects */
   --_fx-shadow: var(--fx-shadow, 0 3px 6px -1px var(--clr-black-alpha));
   --_fx-border: var(--fx-border, 1px solid var(--clr-black));
 }
-
 
 .purple-theme,
 :root:has(#purple-theme:checked) {
@@ -62,16 +64,6 @@
   --ff-accent: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   --ff-base: Arial, Helvetica, sans-serif;
 
-  /* box effects */
-  @media (prefers-color-scheme: light) {
-    --fx-shadow: 0 3px 6px -1px var(--clr-black-alpha);
-    --fx-border: 1px solid var(--clr-purple-300);
-  }
-
-  @media (prefers-color-scheme: dark) {
-    --fx-shadow: 0 3px 6px -1px var(--clr-white-alpha);
-    --fx-border: 1px solid var(--clr-purple-300);
-  }
 }
 
 .green-theme,
@@ -89,13 +81,34 @@
   --ff-accent: 'Times New Roman', Times, serif;
   --ff-base: 'Courier New', Courier, monospace;
 
-  /* box effects */
-  @media (prefers-color-scheme: light) {
+}
+
+/* box effects */
+@media (prefers-color-scheme: light) {
+
+  .purple-theme,
+  :root:has(#purple-theme:checked) {
+    --fx-shadow: 0 3px 6px -1px var(--clr-black-alpha);
+    --fx-border: 1px solid var(--clr-purple-300);
+  }
+
+  .green-theme,
+  :root:has(#green-theme:checked) {
     --fx-shadow: 0 3px 6px 5px var(--clr-black-alpha);
     --fx-border: 1px solid var(--clr-green-300);
   }
+}
 
-  @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
+
+  .purple-theme,
+  :root:has(#purple-theme:checked) {
+    --fx-shadow: 0 3px 6px -1px var(--clr-white-alpha);
+    --fx-border: 1px solid var(--clr-purple-300);
+  }
+
+  .green-theme,
+  :root:has(#green-theme:checked) {
     --fx-shadow: 0 3px 6px 5px var(--clr-white-alpha);
     --fx-border: 1px solid var(--clr-green-300);
   }

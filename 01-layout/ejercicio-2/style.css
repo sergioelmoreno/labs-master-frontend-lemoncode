@@ -1,9 +1,5 @@
 @import "./_themes.css";
 
-:root {
-  --pad-base: .5rem;
-}
-
 body {
   font-family: var(--ff-base);
 }
@@ -44,55 +40,55 @@ dialog {
   background: var(--clr-base);
   border-radius: 0 0 0 calc(var(--pad-base)/2);
   box-shadow: var(--fx-shadow);
+}
 
-  legend {
-    text-align: right;
-    font-size: .72rem;
-    color: var(--clr-black-700);
-    padding-block: var(--pad-base);
-    padding-inline: 1rem;
-  }
+.theme-selector legend {
+  text-align: right;
+  font-size: .72rem;
+  color: var(--clr-black-700);
+  padding-block: var(--pad-base);
+  padding-inline: 1rem;
+}
 
-  fieldset {
-    display: flex;
-    z-index: 1;
-    width: fit-content;
-    margin-inline: auto;
-    gap: calc(var(--pad-base)*2);
-    padding: calc(var(--pad-base)*1.2) calc(var(--pad-base)*2);
-    border: 0;
-  }
+.theme-selector fieldset {
+  display: flex;
+  z-index: 1;
+  width: fit-content;
+  margin-inline: auto;
+  gap: calc(var(--pad-base)*2);
+  padding: calc(var(--pad-base)*1.2) calc(var(--pad-base)*2);
+  border: 0;
+}
 
-  input[type="radio"] {
-    appearance: none;
-    width: 1rem;
-    height: 1rem;
-    outline-offset: 3px;
-    border-radius: var(--pad-base);
+.theme-selector input[type="radio"] {
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  outline-offset: 3px;
+  border-radius: var(--pad-base);
+}
 
-    &:hover {
-      cursor: pointer;
-    }
+.theme-selector input[type="radio"]:hover {
+  cursor: pointer;
+}
 
-    &#purple-theme {
-      outline: 3px solid var(--clr-purple-400);
+.theme-selector input[type="radio"]#purple-theme {
+  outline: 3px solid var(--clr-purple-400);
 
-      &:checked,
-      &:focus {
-        background-color: var(--clr-theme-purple);
-      }
-    }
+}
 
-    &#green-theme {
-      outline: 3px solid var(--clr-theme-green);
+.theme-selector input[type="radio"]#purple-theme:checked,
+.theme-selector input[type="radio"]#purple-theme:focus {
+  background-color: var(--clr-theme-purple);
+}
 
-      &:checked,
-      &:focus {
-        background-color: var(--clr-theme-green);
-      }
-    }
+.theme-selector input[type="radio"]#green-theme {
+  outline: 3px solid var(--clr-theme-green);
+}
 
-  }
+.theme-selector input[type="radio"]#green-theme:checked,
+.theme-selector input[type="radio"]#green-theme:focus {
+  background-color: var(--clr-theme-green);
 }
 
 .alert {
@@ -103,32 +99,33 @@ dialog {
   padding: var(--pad-base);
   margin-bottom: 1rem;
   border: 1px solid;
+}
 
-  .alert-icon {
-    flex: 0 1 fit-content;
-    padding: var(--pad-base);
-  }
+.alert .alert-icon {
+  flex: 0 1 fit-content;
+  padding: var(--pad-base);
+}
 
-  p {
-    margin-top: var(--pad-base);
-    margin-bottom: 0;
-    color: var(--clr-white);
-  }
-
+.alert p {
+  margin-top: var(--pad-base);
+  margin-bottom: 0;
+  color: var(--clr-white);
 }
 
 .alert-warning {
   background-color: var(--clr-base-warning);
 
-  svg {
-    fill: var(--clr-text-warning)
-  }
+}
+
+.alert-warning svg {
+  fill: var(--clr-text-warning)
 }
 
 .alert-important {
   background-color: var(--clr-base-important);
 
-  svg {
-    fill: var(--clr-text-important)
-  }
+}
+
+.alert-important svg {
+  fill: var(--clr-text-important)
 }
