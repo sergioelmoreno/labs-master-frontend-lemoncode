@@ -1,0 +1,38 @@
+$palette: (
+  "red": hsl(4, 90%, 58%),
+  "blue": hsl(231, 48%, 48%),
+  "green": hsl(122, 39%, 49%),
+);
+
+@mixin color-palette($class, $color, $levels: 4) {
+
+  $light: lightness($color );
+
+  @for $level from 1 through $levels {
+
+    .#{$class}-#{$level} {
+
+      @if $class =="darken" {
+        background-color: darken($color, percentage($level / ($levels * 5)));
+      }
+
+      @else {
+        background-color: lighten($color, percentage($level / ($levels * 10)));
+      }
+    }
+  }
+}
+
+@each $color, $hsl in $palette {
+
+  .theme-#{$color} {
+
+    .base-color {
+      background-color: $hsl;
+    }
+
+    @include color-palette("darken", $hsl);
+    @include color-palette("lighten", $hsl);
+
+  }
+}

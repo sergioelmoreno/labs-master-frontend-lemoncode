@@ -1,0 +1,20 @@
+@use "./utils" as *;
+@use "./color-palette";
+
+.container {
+  margin-bottom: .5rem;
+  display: flex;
+  justify-content: space-between;
+  gap: .5rem;
+}
+
+.box {
+  flex: 0 1 auto;
+  min-width: fit-content;
+  @include boxes();
+
+  span {
+    font-size: max(.5rem, 1.2cqw);
+    text-align: center;
+  }
+}
