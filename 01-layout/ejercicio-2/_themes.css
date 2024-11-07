@@ -6,7 +6,7 @@
   --clr-black-700: hsl(0, 0%, 0%);
   --clr-black-400: hsl(0, 0%, 31%);
   --clr-black-300: hsl(0, 0%, 80%);
-  --clr-black-alpha: hsla(0, 0%, 0%, .32);
+  --clr-black-alpha: hsl(from var(--clr-black-700) h s l / 32%);
   --clr-purple-700: hsl(316, 71%, 45%);
   --clr-purple-400: hsl(270, 50%, 40%);
   --clr-purple-300: hsl(290, 32%, 81%);

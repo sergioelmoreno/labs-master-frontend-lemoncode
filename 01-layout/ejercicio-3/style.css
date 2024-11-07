@@ -6,13 +6,14 @@
   --clr-black-700: hsl(0, 0%, 0%);
   --clr-black-400: hsl(0, 0%, 31%);
   --clr-black-300: hsl(0, 0%, 80%);
-  --clr-black-alpha: hsla(0, 0%, 0%, .32);
+  --clr-black-alpha: hsl(from var(--clr-black-700) h s l / 32%);
   --clr-purple-700: hsl(316, 71%, 45%);
   --clr-purple-400: hsl(270, 50%, 40%);
   --clr-purple-300: hsl(290, 32%, 81%);
 
   /* theme colors */
   --clr-base: var(--clr-purple-400);
+  --clr-base-alpha: hsl(from var(--clr-purple-400) h s l / 32%);
   --clr-accent: var(--clr-purple-700);
   --clr-pale: var(--clr-purple-300);
   --clr-text: var(--clr-black);
@@ -35,20 +36,20 @@
 
   /* spacing */
   --pad-base: 1rem;
+
+  /* effects*/
+  --_text-shadow: var(--text-shadow, 0 3px 2px var(--clr-black-alpha));
 }
 
-/* box effects */
 @media (prefers-color-scheme: light) {
   :root {
-    --fx-shadow: 0 3px 6px -1px var(--clr-black-alpha);
-    --fx-border: 1px solid var(--clr-purple-700);
+    --fx-shadow: 0 3px 2px var(--clr-base-alpha);
   }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --fx-shadow: 0 3px 6px -1px var(--clr-white-alpha);
-    --fx-border: 1px solid var(--clr-purple-300);
+    --fx-shadow: 0 3px 2px var(--clr-black-700);
   }
 }
 
@@ -77,7 +78,9 @@ strong {
 header .brand {
   padding-top: var(--pad-base);
   margin-bottom: var(--pad-base);
-  color: var(--clr-white);
+}
+
+header .brand p {
   font-size: var(--fs-700);
   font-weight: var(--fw-bold);
   text-shadow: var(--fx-shadow);
