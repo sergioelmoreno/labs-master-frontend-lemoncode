@@ -1,0 +1,215 @@
+:root {
+
+  /* colors */
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-white-alpha: hsla(0, 0%, 100%, .52);
+  --clr-black-700: hsl(0, 0%, 0%);
+  --clr-black-400: hsl(0, 0%, 31%);
+  --clr-black-300: hsl(0, 0%, 80%);
+  --clr-green-700: hsl(94, 51%, 29%);
+  --clr-green-400: hsl(94, 48%, 51%);
+  --clr-green-300: hsl(94, 51%, 78%);
+
+  /* theme colors */
+  --clr-base: var(--clr-green-400);
+  --clr-base-alpha: hsl(from var(--clr-green-700) h s l / 32%);
+  --clr-base-accent: var(--clr-green-700);
+  --clr-base-pale: var(--clr-green-300);
+  --clr-text: var(--clr-black);
+  --clr-bg-card: hsl(from var(--clr-black-700) h s l / .7);
+  /* font families */
+  --ff-accent: "Doto", sans-serif;
+  --ff-base: "Outfit", serif;
+
+  /* font weights */
+  --fw-regular: 400;
+  --fw-thin: 200;
+  --fw-bold: 600;
+  --fw-black: 700;
+
+  /* font sizes */
+  --fs-200: .75rem;
+  --fs-300: 1rem;
+  --fs-400: 1.125rem;
+  --fs-500: 1.375rem;
+  --fs-600: 1.75rem;
+  --fs-700: 2.25rem;
+
+  /* effects*/
+  --_fx-text-shadow: var(--fx-text-shadow, 1px 2px 2px var(--clr-black-alpha));
+
+  /* grid */
+  --_min-ch: var(--min-ch, 30ch);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --fx-text-shadow: 1px 2px 2px var(--clr-base-alpha);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fx-text-shadow: 1px 2px 2px var(--clr-black-700);
+  }
+}
+
+body {
+  font-family: var(--ff-base);
+  font-weight: var(--fw-thin);
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "ROND" 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--ff-accent);
+  font-weight: var(--fw-bold);
+}
+
+h1 {
+  font-size: var(--fs-700);
+}
+
+h2 {
+  font-size: var(--fs-600);
+}
+
+h3 {
+  font-size: var(--fs-500);
+}
+
+strong {
+  font-weight: var(--fw-bold);
+}
+
+small {
+  font-size: var(--fs-200);
+}
+
+.wrapper {
+  --_max-width: var(--max-width, 60rem);
+  width: min(100%, var(--_max-width));
+  margin-inline: auto;
+}
+
+@media screen and (min-width: 64rem) {
+  .wrapper {
+    --max-width: 80rem;
+    width: min(100%, var(--max-width));
+  }
+}
+
+.btn {
+  text-decoration: none;
+  color: var(--clr-white);
+  background-color: var(--clr-base);
+  border-radius: .25rem;
+  padding: .5rem 1rem;
+  text-align: center;
+  font-weight: var(--fw-regular);
+  transition: background-color 325ms ease-in, color 325ms ease-out;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  background-color: var(--clr-base-pale);
+  color: var(--clr-black-700)
+}
+
+.card-grid {
+  --min-ch: 32ch;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(var(--min-ch), 100%), 1fr));
+  container: card-grid / inline-size;
+}
+
+@media screen and (min-width: 64rem) {
+
+  .card-grid {
+    --min-ch: 30ch;
+  }
+}
+
+.card {
+  background-color: var(--clr-bg-card);
+  padding: 1rem;
+}
+
+.card figure {
+  aspect-ratio: 16 / 8;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.card img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.card h3 {
+  text-shadow: var(--fx-text-shadow);
+}
+
+.card-content {
+  color: var(--clr-white);
+}
+
+.card .card-content-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.card .card-content-footer p {
+  text-align: right;
+}
+
+@container card-grid (inline-size > calc(30ch * 2 + 1rem)) {
+  .card:first-child {
+    grid-column: span 2;
+  }
+}
+
+@container card-grid (inline-size > calc(30ch * 3 + 1rem)) {
+  .card:first-child {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: subgrid;
+    gap: 0;
+    padding: 0;
+  }
+
+  .card:first-child>* {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+  }
+
+  .card:first-child figure {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0;
+  }
+
+  .card:first-child h3 {
+    font-size: var(--fs-700);
+  }
+
+  .card:first-child .card-content {
+    background-color: var(--clr-bg-card);
+    padding: 1rem;
+    z-index: 1;
+    max-width: calc(50% - .5em);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+}
