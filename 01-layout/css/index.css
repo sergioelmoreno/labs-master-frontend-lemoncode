@@ -31,11 +31,6 @@ h1 {
   font-size: var(--fs-700);
   font-weight: var(--fw-bold);
 
-  &::before {
-    content: "🍋";
-    margin-right: .25rem;
-    display: inline-block;
-  }
 }
 
 main {
