@@ -1,0 +1,45 @@
+/**
+* menu layout
+*/
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.menu-title {
+  display: none;
+  text-align: center;
+}
+
+.menu-container ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 1px;
+}
+
+.menu-container li {
+  flex: 1 0 auto;
+  text-align: center;
+}
+
+@media screen and (min-width: 48rem) {
+
+  .menu-container {
+    padding: 0;
+  }
+
+  .menu-container ul {
+    padding-inline: 0;
+    flex-direction: column;
+  }
+
+  .menu-title {
+    display: block;
+  }
+
+  .menu-container li {
+    text-align: left;
+  }
+}

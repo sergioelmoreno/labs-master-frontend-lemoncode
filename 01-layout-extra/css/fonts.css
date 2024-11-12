@@ -1,0 +1,59 @@
+/**
+* fonts
+*/
+
+body {
+  font-family: var(--ff-base);
+  font-weight: var(--fw-thin);
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "ROND" 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--ff-accent);
+  font-weight: var(--fw-bold);
+}
+
+h1 {
+  font-size: var(--fs-700);
+}
+
+h2 {
+  font-size: var(--fs-600);
+}
+
+h3 {
+  font-size: var(--fs-500);
+}
+
+strong {
+  font-weight: var(--fw-bold);
+}
+
+small {
+  font-size: var(--fs-200);
+}
+
+.toolbar {
+  font-size: var(--fs-toolbar);
+}
+
+.page-title {
+  font-size: var(--fs-page-title);
+}
+
+.menu-title {
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+}
+
+.menu-container li {
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-200);
+}

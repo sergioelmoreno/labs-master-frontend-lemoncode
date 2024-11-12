@@ -1,0 +1,28 @@
+/**
+* toolbar layout
+*/
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toolbar-form-search {
+  display: flex;
+  align-items: center;
+}
+
+.toolbar-form-search input {
+  display: none;
+}
+
+@media screen and (min-width: 48rem) {
+  .toolbar-form-search button {
+    display: none;
+  }
+
+  .toolbar-form-search input {
+    display: block;
+  }
+}

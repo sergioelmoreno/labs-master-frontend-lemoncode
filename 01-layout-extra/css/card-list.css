@@ -1,0 +1,45 @@
+/**
+* card list structure
+*/
+
+.page-container .list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+
+.card {
+  flex: 1 1 100%;
+  max-width: 100%;
+  padding: 1rem;
+  border-radius: var(--fx-border-radius);
+  background-color: var(--clr-bg-card);
+  border: 1px solid var(--clr-black-300);
+}
+
+.item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--gap);
+}
+
+@media screen and (min-width: 48rem) {
+
+  .page-container .list {
+    gap: var(--pad);
+  }
+
+  .card {
+    aspect-ratio: 1 / 1;
+    max-width: min(calc(var(--min-ch) + (var(--pad) * 2) + var(--gap)), 100%);
+    text-align: center;
+  }
+
+  .item {
+    flex-direction: column;
+    justify-content: center;
+
+  }
+}
