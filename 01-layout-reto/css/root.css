@@ -1,0 +1,59 @@
+:root {
+
+  /**
+  * base colors 
+  */
+  --clr-white-700: hsl(0, 0%, 100%);
+  --clr-white-300: hsl(0, 0%, 95%);
+  --clr-black-700: hsl(0, 0%, 8%);
+  --clr-black-400: hsl(0, 0%, 31%);
+  --clr-black-300: hsl(0, 0%, 80%);
+
+  /**
+  * theme colors 
+  */
+  --clr-base-accent: var(--clr-white-700);
+  --clr-base-dark: var(--clr-black-700);
+  --clr-text: var(--clr-white-700);
+
+  /**
+  * font families 
+  */
+  --ff-base: "Jost", sans-serif;
+
+  /**
+  * font sizes 
+  */
+
+  --fs-200: .75rem;
+  --fs-300: 1rem;
+  --fs-400: 1.125rem;
+  --fs-500: 1.375rem;
+  --fs-600: 1.75rem;
+  --fs-700: 2.25rem;
+
+  /**
+  * font weights 
+  */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /**
+  * general sizes 
+  */
+
+  --min-ch: 16ch;
+  --pad: 1rem;
+  --gap: 1rem;
+  --gap-section: 2px;
+  --line: 1.275;
+
+  /**
+  * effects
+  */
+  --fx-box-shadow: 0 0 15px 1px var(--clr-base-dark);
+  --fx-grow-animation: cubic-bezier(.48, .74, 0, .73);
+  --fx-bg-shine: linear-gradient(to right, hsl(from var(--clr-white-700) h s l / 0) 0%, hsl(from var(--clr-white-700) h s l / .3) 100%);
+}

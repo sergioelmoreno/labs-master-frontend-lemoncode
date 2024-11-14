@@ -1,0 +1,86 @@
+/**
+* layout
+*/
+header,
+section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+}
+
+.header-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--gap);
+}
+
+.header-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--gap);
+}
+
+section {
+  container: section / inline-size;
+}
+
+section.top {
+  flex-wrap: wrap;
+}
+
+section .top-item {
+  max-width: 100%;
+  flex: 1 0 auto;
+}
+
+@media screen and (max-width: calc(80rem - 1px)) {
+  section .top-item {
+    max-width: 33.3333%;
+  }
+
+  section .top-item:nth-last-child(1),
+  section .top-item:nth-last-child(2) {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 80rem) {
+
+  section .top-item {
+    max-width: 20%;
+  }
+}
+
+section:not(.top) {
+  gap: var(--gap-section);
+  flex-wrap: wrap;
+}
+
+section .item {
+  flex: 1 0 auto;
+  max-width: max(100%, calc(250px - (var(--gap-section) * 2)));
+}
+
+@media screen and (min-width: 64rem) and (max-width: calc(80rem - 1px)) {
+  section .item {
+    max-width: calc(25% - var(--gap-section));
+  }
+
+  section:not(.top) .item:nth-last-child(1),
+  section:not(.top) .item:nth-last-child(2) {
+    flex: 1 0 100%;
+    max-width: calc(50% - var(--gap-section));
+  }
+}
+
+@media screen and (min-width: 80rem) {
+  section .item {
+    max-width: calc((100% / 6) - var(--gap-section));
+  }
+}

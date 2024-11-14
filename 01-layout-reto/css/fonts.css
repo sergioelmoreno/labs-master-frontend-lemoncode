@@ -1,0 +1,27 @@
+/**
+* fonts
+*/
+body {
+  font-family: var(--ff-base);
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.platform-title {
+  display: none;
+}
+
+.header-buttons {
+  font-size: clamp(var(--fs-200), 2vw+1.5rem, var(--fs-400));
+}
+
+.section-title {
+  font-size: var(--fs-400);
+}
+
+@media screen and (min-width: 48rem) {
+  .platform-title {
+    display: block;
+    font-size: var(--fs-400);
+  }
+}

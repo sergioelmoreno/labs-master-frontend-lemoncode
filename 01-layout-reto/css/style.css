@@ -1,0 +1,112 @@
+@import "./reset.css";
+@import "./root.css";
+@import "./layout.css";
+@import "./fonts.css";
+
+body {
+  background-color: var(--clr-base-dark);
+  color: var(--clr-text);
+}
+
+header {
+  background-color: hsl(from var(--clr-base-dark) h s l / .92);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  padding: var(--pad);
+  box-shadow: var(--fx-box-shadow);
+}
+
+img {
+  width: 100%;
+}
+
+header img {
+  width: 100%;
+  max-width: min(18vw, 4rem);
+}
+
+main {
+  padding-inline: var(--pad);
+  overflow: hidden;
+}
+
+section {
+  margin-bottom: var(--gap);
+}
+
+.section-title {
+  margin-bottom: calc(var(--gap) / 2);
+}
+
+.top-item figure,
+.item figure {
+  position: relative;
+  overflow: hidden;
+  transition: transform .20s var(--fx-grow-animation);
+}
+
+.item figure::before {
+  position: absolute;
+  top: 0;
+  left: -75%;
+  z-index: 2;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+  background: var(--fx-bg-shine);
+  transform: skewX(-5deg);
+  filter: blur(5px);
+}
+
+.top-item figure:hover,
+.item figure:hover {
+  cursor: pointer;
+}
+
+.top-item figure:hover,
+.item figure:hover {
+  transform: scale(1.1);
+  z-index: 1;
+  box-shadow: var(--fx-box-shadow);
+}
+
+.item figure:hover::before {
+  animation: shine .75s;
+  animation-delay: .06s;
+}
+
+.section-title #top-text::before {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: var(--fw-bold);
+  display: inline-block;
+}
+
+@media screen and (max-width: calc(80rem - 1px)) {
+  .section-title #top-text::before {
+    content: "3";
+  }
+}
+
+@media screen and (min-width: 80rem) {
+  .section-title #top-text::before {
+    content: "5";
+  }
+}
+
+@keyframes shine {
+  100% {
+    left: 150%;
+    opacity: .3;
+  }
+
+  50% {
+    opacity: .7;
+  }
+
+  0% {
+    opacity: 0;
+  }
+}
