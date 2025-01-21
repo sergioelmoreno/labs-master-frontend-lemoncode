@@ -10,3 +10,10 @@ Laboratorios realizados durante el Máster FronEnd XVII en Lemoncode - `2024`
   - [x] [ejercicio-4](./01-layout/ejercicio-4/)
 - [x] [01 Layout Extra](./01-layout-extra/)
 - [x] [01 Layout Reto](./01-layout-reto/)
+
+## 02 Languages
+
+- [x] [02 Languages](./02-languages/)
+  - [ ] [01 Práctica](./02-languages/src/01-practica/)
+  - [x] [02 Entregables](./02-languages/src/02-entregables/)
+  - [x] [03 Retos](./02-languages/src/03-retos/)  
