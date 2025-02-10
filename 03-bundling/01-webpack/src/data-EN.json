@@ -1,0 +1,97 @@
+{
+  "name": "Sergio del Campo Puerta",
+  "tagline": "Front End Developer",
+  "bio": [
+    "Front End Developer with experience in Full Stack (MERN).",
+    "Over the last 15 years, I have developed my professional career mainly in the IT Services and Consulting sector (web applications and gamification software), contributing my experience, versatility, and creative problem-solving in the development of all kinds of products.",
+    "I also have experience in Web Design - UX/UI, using the main graphic design and prototyping programs (Figma, Adobe CS, Sketch)."
+  ],
+  "contact": {
+    "location": "Madrid - España",
+    "phone": "+34 615 272 958",
+    "email": "sergio@sergioelmoreno.com",
+    "linkedin": "https://www.linkedin.com/in/sergioelmoreno/",
+    "github": "https://github.com/sergioelmoreno"
+  },
+  "skills": [
+    "HTML5 ~ CSS3 ~ Javascript (ES6) - Typescript 5",
+    "ViteJS ~ Bootstrap 5 ~ Github",
+    "MongoDB ~ Express ~ ReactJS ~ NodeJS",
+    "Estándares de Accesibilidad (WCAG) 2",
+    "Visual Studio Code ~ Postman ~ Git CLI",
+    "Figma, Sketch, Adobe CS (Ai + Ps + XD)"
+  ],
+  "education_and_languages": [
+    "Master's in Front End at Lemoncode (2024 - 2025)",
+    "Full-stack Developer Bootcamp at Ironhack Madrid (2024)",
+    "Digital Image and Color Treatment Systems by the Community of Madrid (1998)",
+    "Web Design and Programming by the Community of Madrid (1999)",
+    "Native Spanish speaker",
+    "C1-level English"
+  ],
+  "soft_skills": [
+    "Creativity, attention to detail, and punctuality in project delivery.",
+    "Web Design, UX/UI, and Graphic (offset).",
+    "Communication skills, commitment, organization, and teamwork."
+  ],
+  "more_info": [
+    "https://codepen.io/sergiolasombra",
+    "https://www.behance.net/sergioelmoreno",
+    "https://www.codewars.com/users/sergioelmoreno"
+  ],
+  "professional_experience": [
+    {
+      "title": "Front-end Developer ~ Web Design",
+      "company": "Cool Tabs",
+      "years": "[2017 - 2024]",
+      "responsibilities": [
+        "Front-end development, maintenance, and development of front-end solutions for the Cool Tabs app built with Ruby on Rails.",
+        "Graphic and web design for clients, internal projects, and platform functionalities."
+      ],
+      "technologies": "[HTML, CSS, JavaScript ES6, jQuery 3, Ruby]"
+    },
+    {
+      "title": "Front-end Developer",
+      "company": "Mister Kiwi - Letterbrand",
+      "years": "[2015 - 2017]",
+      "responsibilities": [
+        "Front-end development on proprietary CMS (PHP 5) and Wordpress 4.",
+        "Web design for client projects.",
+        "Customization and creation of Themes and Plugins."
+      ],
+      "technologies": "[HTML, CSS, JavaScript ES6, jQuery 3, PHP 5]"
+    },
+    {
+      "title": "Front-end Developer ~ UX/UI",
+      "company": "Betteranapp Lab",
+      "years": "[2014 - 2015]",
+      "responsibilities": [
+        "Front-end development with Wordpress 4.",
+        "Customization of Themes and Plugins.",
+        "Web Design ~ UX/UI for clients.",
+        "Linux server management with Azure WS."
+      ],
+      "technologies": "[HTML, CSS, JavaScript ES5, jQuery 2, PHP 4, Azure WS]"
+    },
+    {
+      "title": "Front-end Developer ~ Web Design",
+      "company": "Blusens Corporation",
+      "years": "[2008 - 2013]",
+      "responsibilities": [
+        "Front-end development with Wordpress 3.",
+        "Customization of Themes and Plugins.",
+        "Graphic and Web Design for internal projects."
+      ],
+      "technologies": "[HTML, CSS, JavaScript ES3, PHP 4]"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Quickmock",
+      "company": "Lemoncode",
+      "years": "[2024 - ]",
+      "description": "Collaboration on Open Source project",
+      "link": "https://github.com/Lemoncode/quickmock"
+    }
+  ]
+}

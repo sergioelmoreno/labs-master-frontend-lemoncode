@@ -1,0 +1,149 @@
+//@use "./_paper.scss";
+@use "./_reset.scss";
+
+/* Styles */
+:root {
+  --common-space: 5mm;
+}
+
+$common-space: var(--common-space);
+
+html,
+body {
+  font-family: "IBM Plex Sans", system-ui;
+  font-size: 11pt;
+  color: #191C1F;
+  line-height: 1.2;
+  /* text-wrap: balance; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: .5rem;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+h3,
+h4 {
+  margin-bottom: .35rem;
+}
+
+a,
+a:visited,
+a:active {
+  color: #191C1F;
+}
+
+ul {
+  margin-left: 0;
+  list-style-position: outside;
+}
+
+ul:not(.clean) li {
+  margin-left: 13px;
+
+}
+
+header,
+article:not(:last-child),
+.mb-20 {
+  margin-bottom: $common-space;
+}
+
+aside {
+  padding-top: $common-space;
+  background: linear-gradient(180deg, #191C1F 63.99%, rgba(25, 28, 31, 0) 100%);
+}
+
+.clean {
+  list-style-type: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-column-gap: $common-space;
+  grid-row-gap: 0px;
+}
+
+.grid--general {
+  grid-template-columns: 30px 1fr;
+  height: inherit;
+}
+
+.grid--content {
+  grid-template-columns: 1fr 1fr;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.wrapper {
+  padding: $common-space;
+  padding-left: 0;
+}
+
+dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  padding: 30px;
+  transform: perspective(500px) translate(-50%, -50%);
+  background: linear-gradient(to bottom, #FFF, #F4F4F4) #FFF;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transform-origin: 50% 50%;
+  animation: dialog 300ms cubic-bezier(.3, 0, .1, 1.4) forwards 1;
+  will-change: transform, opacity;
+}
+
+@keyframes dialog {
+  from {
+    transform: perspective(500px) translate(-50%, -25%) rotateX(45deg) scale(0.1);
+    opacity: 0;
+  }
+}
+
+dialog::backdrop {
+  opacity: 0;
+  will-change: opacity;
+  cursor: no-drop;
+  background: radial-gradient(circle at center, rgba(50, 50, 50, 0.5), rgba(0, 0, 0, 0.5));
+  animation: backdrop 500ms ease forwards 1;
+}
+
+@keyframes backdrop {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
